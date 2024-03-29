@@ -1,0 +1,193 @@
+.depositpage .info {
+	width: 100%;
+	padding: 50px 0 100px;
+
+	&__items {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		column-gap: 50px;
+		row-gap: 50px;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		column-gap: 50px;
+
+		&:nth-child(even) {
+			flex-direction: row-reverse;
+		}
+
+		&-img {
+			flex: 1 0 600px;
+		}
+
+		&-content {
+			flex: 1 1 calc(100% - 50px);
+
+			p {
+				margin-top: 15px;
+				font-size: 16px;
+				line-height: 1.6;
+				color: $text;
+
+				&:first-child {
+					margin: 0;
+				}
+			}
+
+			h2 {
+				margin-top: 15px;
+				font-size: 30px;
+				font-weight: 700;
+				color: $title;
+
+				&:first-child {
+					margin: 0;
+				}
+			}
+
+			ul {
+				margin-top: 15px;
+				padding-left: 20px;
+
+				&:first-child {
+					margin: 0;
+				}
+
+				li {
+					font-size: 16px;
+					line-height: 1.6;
+					color: $text;
+					list-style: disc;
+					list-style-type: disc;
+				}
+			}
+
+			ol {
+				margin-top: 15px;
+				padding-left: 20px;
+
+				&:first-child {
+					margin: 0;
+				}
+
+				li {
+					font-size: 16px;
+					line-height: 1.6;
+					color: $text;
+					list-style: decimal;
+					list-style-type: decimal;
+				}
+			}
+		}
+	}
+
+	&__bot {
+		margin-top: 50px;
+
+		p {
+			margin-top: 15px;
+			font-size: 16px;
+			line-height: 1.6;
+			color: $text;
+
+			&:first-child {
+				margin: 0;
+			}
+		}
+
+		h2 {
+			margin-top: 15px;
+			font-size: 30px;
+			font-weight: 700;
+			color: $title;
+
+			&:first-child {
+				margin: 0;
+			}
+		}
+
+		ul {
+			margin-top: 15px;
+			padding-left: 20px;
+
+			&:first-child {
+				margin: 0;
+			}
+
+			li {
+				font-size: 16px;
+				line-height: 1.6;
+				color: $text;
+				list-style: disc;
+				list-style-type: disc;
+			}
+		}
+
+		ol {
+			margin-top: 15px;
+			padding-left: 20px;
+
+			&:first-child {
+				margin: 0;
+			}
+
+			li {
+				font-size: 16px;
+				line-height: 1.6;
+				color: $text;
+				list-style: decimal;
+				list-style-type: decimal;
+			}
+		}
+	}
+}
+
+@media (max-width: 1350px) {
+	.depositpage .info {
+		&__items {
+			column-gap: 30px;
+			row-gap: 30px;
+		}
+
+		&__item {
+			column-gap: 30px;
+
+			&-content {
+				flex: 1 1 calc(100% - 30px);
+			}
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	.depositpage .info {
+		&__item {
+			align-items: flex-start;
+			flex-direction: column !important;
+			row-gap: 30px;
+
+			&-img {
+				flex: 1 1 100%;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.depositpage .info {
+		&__item-content {
+			h2 {
+				font-size: 26px;
+			}
+		}
+
+		&__bot {
+			h2 {
+				font-size: 26px;
+			}
+		}
+	}
+}

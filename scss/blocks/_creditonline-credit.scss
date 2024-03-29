@@ -1,0 +1,335 @@
+.credit-online .credit {
+	padding: 100px 0 50px;
+
+	&__inner {
+		padding: 50px 100px;
+		background-color: $white;
+		filter: drop-shadow(0px 4px 36px rgba(24, 168, 108, 0.18));
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 30px;
+		line-height: 1.6;
+		color: $title;
+	}
+
+	&__subtitle {
+		margin-top: 10px;
+		font-size: 16px;
+		line-height: 1.6;
+		color: $text;
+	}
+
+	&__calc {
+		margin-top: 30px;
+		display: flex;
+		align-items: center;
+	}
+
+	&__range {
+		width: 820px;
+
+		.top {
+			margin-bottom: 5px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			&__title,
+			&__result {
+				font-size: 16px;
+				line-height: 1.6;
+				color: $text;
+			}
+		}
+
+		&-input {
+			position: relative;
+
+			input {
+				-webkit-appearance: none;
+				appearance: none;
+				width: 100%;
+				cursor: pointer;
+				outline: none;
+				border-radius: 15px;
+				height: 6px;
+				background: #ccc;
+
+				&::-webkit-slider-thumb {
+					-webkit-appearance: none;
+					appearance: none;
+					height: 22px;
+					width: 22px;
+					background-color: $white;
+					border: 5px solid $primary;
+					border-radius: 50%;
+					transition: 0.2s ease-in-out;
+				}
+
+				&::-moz-range-thumb {
+					height: 22px;
+					width: 22px;
+					background-color: $primary;
+					border-radius: 50%;
+					border: none;
+					transition: 0.2s ease-in-out;
+				}
+			}
+		}
+
+		.stages {
+			height: 16px;
+			margin-top: 10px;
+			display: flex;
+			justify-content: space-between;
+			position: relative;
+
+			&__item {
+				text-align: center;
+				font-size: 14px;
+				color: #ccc;
+				position: absolute;
+
+				&::before {
+					content: '';
+					width: 1px;
+					height: 12px;
+					background: #ccc;
+					position: absolute;
+					top: -14px;
+					left: 50%;
+					transform: translateX(-50%);
+					z-index: -1;
+				}
+
+				&:nth-child(1) {
+					left: -30px;
+				}
+
+				&:nth-child(2) {
+					left: 18.4%;
+				}
+
+				&:nth-child(3) {
+					left: 43.5%;
+				}
+
+				&:nth-child(4) {
+					left: 68.85%;
+				}
+
+				&:nth-child(5) {
+					right: -35px;
+				}
+			}
+		}
+	}
+
+	&__btn {
+		width: 200px;
+		height: 54px;
+		margin-left: auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 16px;
+		font-weight: 700;
+		color: #fcfbf9;
+		background-color: $primary;
+		transition: all 0.2s linear;
+		border: 2px solid $primary;
+
+		@media (hover: hover) {
+			&:hover {
+				color: $primary;
+				background-color: $white;
+			}
+		}
+
+		@media (hover: none) {
+			&:active {
+				color: $primary;
+				background-color: $white;
+			}
+		}
+	}
+}
+
+@media (max-width: 1350px) {
+	.credit-online .credit {
+		&__inner {
+			padding: 50px 70px;
+		}
+	}
+}
+
+@media (max-width: 1250px) {
+	.credit-online .credit {
+		&__inner {
+			padding: 50px;
+		}
+
+		&__calc {
+			column-gap: 50px;
+		}
+
+		&__btn {
+			max-width: 180px;
+			width: 100%;
+			flex: 1 0 calc(100% - 820px);
+		}
+	}
+}
+
+@media (max-width: 1160px) {
+	.credit-online .credit {
+		&__calc {
+			flex-direction: column;
+			align-items: flex-start;
+			row-gap: 50px;
+		}
+
+		&__range {
+			width: 100%;
+			margin: 0 auto;
+
+			.stages {
+				&__item {
+					&:nth-child(1) {
+						left: 0;
+
+						&::before {
+							left: 0;
+							transform: translateX(0);
+						}
+					}
+
+					&:nth-child(2) {
+						left: 18.6%;
+					}
+
+					&:nth-child(3) {
+						left: 43.7%;
+					}
+
+					&:nth-child(4) {
+						left: 69.35%;
+					}
+
+					&:nth-child(5) {
+						right: 0;
+
+						&::before {
+							right: 2px;
+							left: auto;
+							transform: translateX(0);
+						}
+					}
+				}
+			}
+		}
+
+		&__btn {
+			flex: auto;
+			margin: 0 auto;
+		}
+	}
+}
+
+@media (max-width: 900px) {
+	.credit-online .credit {
+		&__range {
+			.stages {
+				&__item {
+					&:nth-child(2) {
+						left: 18.2%;
+					}
+
+					&:nth-child(3) {
+						left: 43%;
+					}
+
+					&:nth-child(4) {
+						left: 68.35%;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.credit-online .credit {
+		&__inner {
+			padding: 30px;
+		}
+
+		&__title {
+			font-size: 26px;
+		}
+
+		&__calc {
+			row-gap: 30px;
+		}
+
+		&__range {
+			&-input {
+				div {
+					display: none;
+				}
+
+				input {
+					&::-webkit-slider-thumb {
+						height: 20px;
+						width: 20px;
+						border: 5px solid $primary;
+					}
+
+					&::-moz-range-thumb {
+						height: 20px;
+						width: 20px;
+						border: 5px solid $primary;
+					}
+				}
+			}
+
+			.stages {
+				&__item {
+					&:nth-child(2) {
+						left: 22.5%;
+
+						span {
+							display: none;
+						}
+					}
+
+					&:nth-child(3) {
+						left: 48%;
+
+						span {
+							display: none;
+						}
+					}
+
+					&:nth-child(4) {
+						left: 73.2%;
+
+						span {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.credit-online .credit {
+		&__inner {
+			padding: 30px 15px;
+		}
+	}
+}

@@ -1,0 +1,198 @@
+.islampage .feedback {
+	width: 100%;
+	padding: 75px 0;
+	background: url('../images/islam/feedback-bg.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	&__inner {
+		max-width: 980px;
+		margin: 0 auto;
+		padding: 73px 50px;
+		background: rgba(255, 255, 255, 0.7);
+		backdrop-filter: blur(20px);
+	}
+
+	&__title {
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 1.6;
+		color: $title;
+		text-align: center;
+	}
+
+	&__subtitle {
+		margin-top: 20px;
+		font-size: 16px;
+		line-height: 1.6;
+		color: $text;
+		text-align: center;
+	}
+
+	.form {
+		max-width: 404px;
+		margin: 20px auto 0;
+
+		&__item {
+			position: relative;
+
+			&:not(:first-child) {
+				margin-top: 30px;
+			}
+
+			&:nth-child(2) {
+				width: 100%;
+				height: 60px;
+				padding: 0 20px 0 60px;
+				border: 1px solid #606060;
+
+				&.error {
+					border: 1px solid red;
+				}
+
+				span {
+					padding: 0 10px;
+					position: absolute;
+					top: -9.6px;
+					left: 10px;
+					font-size: 16px;
+					color: $text;
+					background: #f8f8f8;
+				}
+
+				.input__before {
+					padding: 0;
+					height: 100%;
+					display: flex;
+					align-items: center;
+					font-size: 16px;
+					color: $text;
+					position: absolute;
+					top: 0;
+					left: 20px;
+					background: transparent;
+				}
+
+				input {
+					width: 100%;
+					height: 100%;
+					font-size: 16px;
+					color: $text;
+					border: none;
+					padding: 0;
+				}
+			}
+
+			span {
+				padding: 0 10px;
+				position: absolute;
+				top: -9.6px;
+				left: 10px;
+				font-size: 16px;
+				color: $text;
+				background: #f8f8f8;
+			}
+
+			&-input {
+				width: 100%;
+				height: 60px;
+				font-size: 16px;
+				color: $text;
+				padding: 0 20px;
+				border: 1px solid #606060;
+			}
+		}
+
+		&__btn {
+			margin-top: 25px;
+			width: 100%;
+			height: 54px;
+			font-size: 16px;
+			font-weight: 700;
+			color: #fcfbf9;
+			background-color: $primary;
+			transition: all 0.2s linear;
+			border: 2px solid $primary;
+
+			@media (hover: hover) {
+				&:hover {
+					color: $primary;
+					background-color: $white;
+				}
+			}
+
+			@media (hover: none) {
+				&:active {
+					color: $primary;
+					background-color: $white;
+				}
+			}
+		}
+	}
+
+	&__tel {
+		margin-top: 20px;
+
+		p {
+			font-size: 20px;
+			color: $text;
+			text-align: center;
+		}
+
+		a {
+			font-size: 20px;
+			font-weight: 700;
+			color: $primary;
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.islampage .feedback {
+		padding: 0;
+
+		.container {
+			padding: 0;
+		}
+
+		&__inner {
+			max-width: 100%;
+			width: 100%;
+			padding: 70px 15px;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.islampage .feedback {
+		&__subtitle {
+			font-size: 14px;
+			margin-top: 10px;
+		}
+
+		.form__item {
+			&-input {
+				height: 55px;
+			}
+		}
+
+		&__tel {
+			p {
+				font-size: 16px;
+			}
+			a {
+				font-size: 16px;
+				display: block;
+			}
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.islampage .feedback {
+		&__inner {
+			padding: 60px 15px;
+		}
+	}
+}

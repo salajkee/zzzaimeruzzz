@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<body>
+		<header class="wizard-header">
+			<div class="container">
+				<div class="wizard-header__inner">
+					<a class="wizard-header__logo" href="./index.html">
+						<img src="./images/header/logo.png" alt="logo" />
+					</a>
+					<a class="wizard-header__cabinet" href="#"> Личный кабинет </a>
+				</div>
+			</div>
+		</header>
+
+		<main class="main wizardpage">
+			<section class="wizard">
+				<div class="container">
+					<div class="wizard__top">
+						<div class="wizard__top-content">
+							<h1 class="wizard__top-title">Онлайн заявка</h1>
+							<div class="wizard__top-info wizard__top-info--active">
+								<p class="wizard__top-info-top">
+									Заполните всю анкету и увеличьте возможность одобрения кредита
+									до 80%
+								</p>
+							</div>
+							<div class="wizard__top-info">
+								<p class="wizard__top-info-top">
+									Укажите правдивую информацию по кредитной истории до проверки
+									банка
+								</p>
+								<p class="wizard__top-info-bot">
+									Второй шаг - получите +20% к возможности одобрения
+								</p>
+							</div>
+							<div class="wizard__top-info">
+								<p class="wizard__top-info-top">
+									Укажите залог и увеличьте шанс и сумму выдачи денег
+								</p>
+								<p class="wizard__top-info-bot">
+									Третий шаг - получите +20% к возможности одобрения
+								</p>
+							</div>
+							<div class="wizard__top-info">
+								<p class="wizard__top-info-top">
+									Укажите свои контактные данные
+								</p>
+								<p class="wizard__top-info-bot">
+									Четвертый шаг - получите +15% к возможности одобрения
+								</p>
+							</div>
+						</div>
+						<div class="wizard__steps steps">
+							<div class="steps__item steps__item--active">
+								<div class="steps__item-icon">
+									<img src="./images/wizard/check-icon.svg" alt="icon" />
+								</div>
+								<p class="steps__item-text">Шаг 1</p>
+							</div>
+							<svg class="steps__icon steps__icon--active">
+								<use xlink:href="./sprite.svg#wizard-right-arrow"></use>
+							</svg>
+							<div class="steps__item">
+								<div class="steps__item-icon">
+									<img src="./images/wizard/check-icon.svg" alt="icon" />
+								</div>
+								<p class="steps__item-text">Шаг 2</p>
+							</div>
+							<svg class="steps__icon">
+								<use xlink:href="./sprite.svg#wizard-right-arrow"></use>
+							</svg>
+							<div class="steps__item">
+								<div class="steps__item-icon">
+									<img src="./images/wizard/check-icon.svg" alt="icon" />
+								</div>
+								<p class="steps__item-text">Шаг 3</p>
+							</div>
+							<svg class="steps__icon">
+								<use xlink:href="./sprite.svg#wizard-right-arrow"></use>
+							</svg>
+							<div class="steps__item">
+								<div class="steps__item-icon">
+									<img src="./images/wizard/check-icon.svg" alt="icon" />
+								</div>
+								<p class="steps__item-text">Шаг 4</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="wizard__step wizard__step--active">
+						<div class="wizard__sum">
+							<div class="wizard__sum-top top">
+								<p class="top__title">Сумма кредита (сум)</p>
+								<div class="top__input">
+									<div class="top__input-btns">
+										<svg class="top__input-increment">
+											<use xlink:href="./sprite.svg#wizard-increment"></use>
+										</svg>
+										<svg class="top__input-decrement">
+											<use xlink:href="./sprite.svg#wizard-decrement"></use>
+										</svg>
+									</div>
+									<input type="text" />
+								</div>
+							</div>
+							<div class="wizard__sum-range range">
+								<div class="range__input">
+									<input
+										type="range"
+										min="0"
+										max="145000000"
+										step="1000000"
+										value="0"
+									/>
+								</div>
+								<div class="range__stages">
+									<div class="range__stages-item">
+										<span> 5 000 000 </span>
+									</div>
+									<div class="range__stages-item">
+										<span> 30 000 000 </span>
+									</div>
+									<div class="range__stages-item">
+										<span> 60 000 000 </span>
+									</div>
+									<div class="range__stages-item">
+										<span> 90 000 000 </span>
+									</div>
+									<div class="range__stages-item">
+										<span> 120 000 000 </span>
+									</div>
+									<div class="range__stages-item">
+										<span> 150 000 000 </span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="wizard__term">
+							<div class="wizard__term-top top">
+								<p class="top__title">Срок кредита (мес.)</p>
+								<div class="top__input">
+									<div class="top__input-btns">
+										<svg class="top__input-increment">
+											<use xlink:href="./sprite.svg#wizard-increment"></use>
+										</svg>
+										<svg class="top__input-decrement">
+											<use xlink:href="./sprite.svg#wizard-decrement"></use>
+										</svg>
+									</div>
+									<input type="text" />
+								</div>
+							</div>
+							<div class="wizard__top-range range">
+								<div class="range__input">
+									<input type="range" min="0" max="21" value="0" step="3" />
+								</div>
+								<div class="range__stages">
+									<div class="range__stages-item"><span>3</span></div>
+									<div class="range__stages-item"><span>6</span></div>
+									<div class="range__stages-item"><span>9</span></div>
+									<div class="range__stages-item"><span>12</span></div>
+									<div class="range__stages-item"><span>15</span></div>
+									<div class="range__stages-item"><span>18</span></div>
+									<div class="range__stages-item"><span>21</span></div>
+									<div class="range__stages-item"><span>24</span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="wizard__step">
+						<div class="wizard__story">
+							<div class="wizard__story-radio radio">
+								<div class="radio__item">
+									<input
+										type="radio"
+										name="step2"
+										id="step2_radio1"
+										value="Никогда не брал кредитов"
+										checked
+									/>
+									<label for="step2_radio1">
+										<img
+											class="radio__item-icon"
+											src="./images/wizard/step-2-icon.svg"
+											alt="icon"
+										/>
+										<h3 class="radio__item-title">Никогда не брал кредитов</h3>
+										<span class="radio__item-round"></span>
+									</label>
+								</div>
+								<div class="radio__item">
+									<input
+										type="radio"
+										name="step2"
+										id="step1_radio2"
+										value="Кредиты закрыты, просрочек не было"
+									/>
+									<label for="step1_radio2">
+										<img
+											class="radio__item-icon"
+											src="./images/wizard/step-2-icon.svg"
+											alt="icon"
+										/>
+										<h3 class="radio__item-title">
+											Кредиты закрыты, просрочек не было
+										</h3>
+										<span class="radio__item-round"></span>
+									</label>
+								</div>
+								<div class="radio__item">
+									<input
+										type="radio"
+										name="step2"
+										id="step1_radio3"
+										value="Кредиты есть, просрочек нет"
+									/>
+									<label for="step1_radio3">
+										<img
+											class="radio__item-icon"
+											src="./images/wizard/step-2-icon.svg"
+											alt="icon"
+										/>
+										<h3 class="radio__item-title">
+											Кредиты есть, просрочек нет
+										</h3>
+										<span class="radio__item-round"></span>
+									</label>
+								</div>
+								<div class="radio__item">
+									<input
+										type="radio"
+										name="step2"
+										id="step1_radio4"
+										value="Кредиты закрыты, просрочки были"
+									/>
+									<label for="step1_radio4">
+										<img
+											class="radio__item-icon"
+											src="./images/wizard/step-2-icon.svg"
+											alt="icon"
+										/>
+										<h3 class="radio__item-title">
+											Кредиты закрыты, просрочки были
+										</h3>
+										<span class="radio__item-round"></span>
+									</label>
+								</div>
+								<div class="radio__item">
+									<input
+										type="radio"
+										name="step2"
+										id="step1_radio5"
+										value="Просрочки были, сейчас нет"
+									/>
+									<label for="step1_radio5">
+										<img
+											class="radio__item-icon"
+											src="./images/wizard/step-2-icon.svg"
+											alt="icon"
+										/>
+										<h3 class="radio__item-title">
+											Просрочки были, сейчас нет
+										</h3>
+										<span class="radio__item-round"></span>
+									</label>
+								</div>
+								<div class="radio__item">
+									<input
+										type="radio"
+										name="step2"
+										id="step1_radio6"
+										value="Просрочки сейчас есть"
+									/>
+									<label for="step1_radio6">
+										<img
+											class="radio__item-icon"
+											src="./images/wizard/step-2-icon.svg"
+											alt="icon"
+										/>
+										<h3 class="radio__item-title">Просрочки сейчас есть</h3>
+										<span class="radio__item-round"></span>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="wizard__step">
+						<div class="wizard__deposit">
+							<div class="wizard__deposit-radio radio">
+								<div class="radio__item">
+									<input
+										type="radio"
+										name="step3"
+										id="step3_radio1"
+										value="Автомобиль"
+										checked
+									/>
+									<label for="step3_radio1">
+										<div class="radio__item-icon">
+											<img src="./images/wizard/step3/icon-1.svg" alt="icon" />
+										</div>
+										<h3 class="radio__item-title">Автомобиль</h3>
+										<span class="radio__item-round"></span>
+									</label>
+								</div>
+								<div class="radio__item">
+									<input
+										type="radio"
+										name="step3"
+										id="step3_radio2"
+										value="Квартира/Дом"
+									/>
+									<label for="step3_radio2">
+										<div class="radio__item-icon">
+											<img src="./images/wizard/step3/icon-2.svg" alt="icon" />
+										</div>
+										<h3 class="radio__item-title">Квартира / Дом</h3>
+										<span class="radio__item-round"></span>
+									</label>
+								</div>
+								<div class="radio__item">
+									<input
+										type="radio"
+										name="step3"
+										id="step3_radio3"
+										value="Земельный участок"
+									/>
+									<label for="step3_radio3">
+										<div class="radio__item-icon">
+											<img src="./images/wizard/step3/icon-4.svg" alt="icon" />
+										</div>
+										<h3 class="radio__item-title">Земельный участок</h3>
+										<span class="radio__item-round"></span>
+									</label>
+								</div>
+								<div class="radio__item">
+									<input
+										type="radio"
+										name="step3"
+										id="step3_radio4"
+										value="Без залога"
+									/>
+									<label for="step3_radio4">
+										<div class="radio__item-icon">
+											<img src="./images/wizard/step3/icon-5.svg" alt="icon" />
+										</div>
+										<h3 class="radio__item-title">Без залога</h3>
+										<span class="radio__item-round"></span>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="wizard__step">
+						<div class="wizard__form">
+							<div class="wizard__form-items">
+								<div class="wizard__form-item item">
+									<span class="item__label">ФИО*</span>
+									<input class="item__input input__name" type="text" />
+								</div>
+								<div class="wizard__form-item item">
+									<span class="item__label">Телефон*</span>
+									<span class="input__before">+998</span>
+									<input
+										class="item__input input__tel"
+										type="tel"
+										id="phone-wizard"
+										autocomplete="off"
+									/>
+								</div>
+							</div>
+							<p class="wizard__form-title">
+								Для дополнительного увеличения шанса на +15% заполните свой
+								ПИНФЛ (этот шаг можно пропустить)
+							</p>
+							<div class="wizard__form-pinfl pinfl">
+								<span class="pinfl__label"
+									>ПИНФЛ (не обязательное поле)
+									<svg><use xlink:href="./sprite.svg#question-icon"></use></svg>
+								</span>
+								<div class="pinfl__input">
+									<input type="text" maxlength="14" />
+								</div>
+								<span class="pinfl__info">Введите 14 цифр ПИНФЛ</span>
+								<span class="pinfl__error">
+									Ошибка: проверьте правильность введенных данных.
+								</span>
+							</div>
+							<div class="wizard__form-check check">
+								<input
+									class="check__input"
+									type="checkbox"
+									id="wizard-check"
+									checked
+								/>
+								<label class="check__label" for="wizard-check">
+									Даю согласие на обработку персональных данных
+								</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="wizard__bot">
+						<button class="wizard__prev wizard__prev-s1 hide">
+							<img src="./images/wizard/wizard-btn-icon.svg" alt="icon" />
+							Шаг назад
+						</button>
+						<button class="wizard__prev wizard__prev-s2 hide">
+							<img src="./images/wizard/wizard-btn-icon.svg" alt="icon" />
+							Шаг назад
+						</button>
+						<button class="wizard__prev wizard__prev-s3 hide">
+							<img src="./images/wizard/wizard-btn-icon.svg" alt="icon" />
+							Шаг назад
+						</button>
+						<button class="wizard__prev wizard__prev-s4 hide">
+							<img src="./images/wizard/wizard-btn-icon.svg" alt="icon" />
+							Шаг назад
+						</button>
+						<button class="wizard__next wizard__next-s1">
+							Следующий шаг
+							<img src="./images/wizard/wizard-btn-icon.svg" alt="icon" />
+						</button>
+						<button class="wizard__next wizard__next-s2 hide">
+							Следующий шаг
+							<img src="./images/wizard/wizard-btn-icon.svg" alt="icon" />
+						</button>
+						<button class="wizard__next wizard__next-s3 hide">
+							Следующий шаг
+							<img src="./images/wizard/wizard-btn-icon.svg" alt="icon" />
+						</button>
+						<button class="wizard__sbmt hide">
+							Подать заявку
+							<img src="./images/wizard/wizard-btn-icon.svg" alt="icon" />
+						</button>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div class="popup">
+			<div class="popup__bg">
+				<div class="popup__body">
+					<button class="popup__close">
+						<img src="./images/selection/close.svg" alt="close-popup" />
+					</button>
+					<img src="./images/wizard/pinfl.jpg" alt="" />
+				</div>
+			</div>
+		</div>
+
+		<div class="wizard__thnks">
+			<div class="wizard__thnks-bg">
+				<div class="wizard__thnks-body">
+					<button class="wizard__thnks-close">
+						<img src="./images/selection/close.svg" alt="close-popup" />
+					</button>
+					<h2 class="wizard__thnks-title">Ваша заявка отправлена.</h2>
+					<p class="modal__thnks-subtitle">
+						В ближайшее время с вами свяжется специалист
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<script src="./js/imask.js"></script>
+		<script src="./js/script.js"></script>
+	</body>
+</html>

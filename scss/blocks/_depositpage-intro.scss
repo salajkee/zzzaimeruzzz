@@ -1,0 +1,190 @@
+.depositpage .intro {
+	height: calc(100vh - 66.53px);
+	max-height: 900px;
+	background: url('../images/deposit/intro_bg.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	position: relative;
+
+	&__inner {
+		padding-top: 120px;
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 36px;
+		line-height: 1.6;
+		color: $primary;
+	}
+
+	&__list {
+		margin-top: 35px;
+		display: flex;
+		flex-direction: column;
+		row-gap: 20px;
+
+		&-item {
+			padding-left: 45px;
+			font-size: 20px;
+			line-height: 1.6;
+			color: $text;
+			position: relative;
+
+			&::before {
+				content: '';
+				width: 27px;
+				height: 27px;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+				background: url('../images/deposit/list-icon.svg');
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: contain;
+			}
+		}
+	}
+
+	&__img {
+		max-width: 950px;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+
+	&__link {
+		margin-top: 25px;
+		margin-left: 100px;
+		width: 250px;
+		height: 54px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 16px;
+		font-weight: 700;
+		color: #fcfbf9;
+		background-color: $primary;
+		transition: all 0.2s linear;
+		border: 2px solid $primary;
+		position: relative;
+		z-index: 2;
+
+		@media (hover: hover) {
+			&:hover {
+				color: $primary;
+				background-color: $white;
+			}
+		}
+
+		@media (hover: none) {
+			&:active {
+				color: $primary;
+				background-color: $white;
+			}
+		}
+	}
+}
+
+@media (max-width: 1380px) {
+	.depositpage .intro {
+		&__img {
+			max-width: 850px;
+			right: -100px;
+		}
+	}
+}
+
+@media (max-width: 1250px) {
+	.depositpage .intro {
+		height: 100%;
+		max-height: 100%;
+
+		&__inner {
+			padding: 150px 0;
+		}
+
+		&__img {
+			max-width: 850px;
+		}
+	}
+}
+
+@media (max-width: 1170px) {
+	.depositpage .intro {
+		&__inner {
+			padding: 100px 0 200px;
+		}
+
+		&__img {
+			max-width: 750px;
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.depositpage .intro {
+		&__inner {
+			padding: 80px 0 0;
+			display: flex;
+			flex-direction: column;
+		}
+
+		&__list {
+			margin-top: 25px;
+			row-gap: 15px;
+		}
+
+		&__img {
+			max-width: 750px;
+			width: 100%;
+			margin: -80px auto 0;
+			position: relative;
+			top: auto;
+			right: -30px;
+			bottom: auto;
+			left: auto;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.depositpage .intro {
+		&__inner {
+			padding: 50px 0 0;
+		}
+
+		&__title {
+			font-size: 30px;
+		}
+
+		&__list {
+			margin-top: 15px;
+			row-gap: 10px;
+
+			&-item {
+				font-size: 16px;
+				padding-left: 30px;
+
+				&::before {
+					width: 18px;
+					height: 18px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.depositpage .intro {
+		&__img {
+			margin: -20px 0 0;
+		}
+
+		&__link {
+			margin: 25px auto 0;
+		}
+	}
+}

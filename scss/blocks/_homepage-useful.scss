@@ -1,0 +1,154 @@
+.homepage .useful {
+	width: 100%;
+	padding: 50px 0;
+
+	&__title {
+		font-size: 30px;
+		font-weight: 700;
+		line-height: 1.6;
+		color: $title;
+		text-align: center;
+	}
+
+	&__slider {
+		margin-top: 46px;
+		position: relative;
+		overflow: hidden;
+
+		&-item {
+			max-width: 450px;
+			height: auto;
+			display: flex;
+			flex-direction: column;
+
+			&-img {
+				max-width: 412px;
+				height: 272px;
+				object-fit: cover;
+			}
+
+			&-title {
+				margin: 15px 0;
+				font-size: 20px;
+				font-weight: 700;
+				line-height: 1.6;
+				color: $title;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-line-clamp: 1;
+				-webkit-box-orient: vertical;
+			}
+
+			&-descr {
+				margin-top: auto;
+				height: 76.8px;
+				overflow: hidden;
+
+				p {
+					font-size: 16px;
+					line-height: 1.6;
+					color: $text;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					display: -webkit-box;
+					-webkit-line-clamp: 3;
+					-webkit-box-orient: vertical;
+				}
+			}
+
+			&-link {
+				margin-top: 15px;
+				font-size: 16px;
+				font-weight: 700;
+				line-height: 1.5;
+				color: $primary;
+				display: flex;
+				align-items: center;
+
+				svg {
+					width: 27px;
+					height: 8px;
+					margin-left: 15px;
+					fill: $primary;
+				}
+			}
+		}
+	}
+
+	&__link {
+		width: 270px;
+		margin: 46px auto 0;
+		padding: 15px 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 16px;
+		font-weight: 600;
+		color: $white;
+		background-color: $primary;
+
+		&-icon {
+			width: 27px;
+			height: 8px;
+			margin-left: 10px;
+			fill: $white;
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.homepage .useful {
+		.container {
+			padding: 0;
+		}
+		&__slider {
+			padding: 0 15px;
+			&-item {
+				width: 380px;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.homepage .useful {
+		&__title {
+			font-size: 26px;
+		}
+
+		&__slider {
+			margin-top: 25px;
+			&-item {
+				width: 320px;
+
+				&-img {
+					height: 200px;
+				}
+
+				&-title {
+					margin: 10px 0;
+					font-size: 18px;
+				}
+
+				&-descr {
+					margin-top: auto;
+				}
+
+				&-link {
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 375px) {
+	.homepage .useful {
+		&__slider {
+			&-item {
+				width: 280px;
+			}
+		}
+	}
+}

@@ -1,0 +1,79 @@
+.islampage .principles {
+	padding: 50px 0 100px;
+
+	&__title {
+		font-size: 30px;
+		font-weight: 700;
+		line-height: 1.6;
+		color: $title;
+		text-align: center;
+	}
+
+	&__items {
+		margin-top: 40px;
+		display: grid;
+		grid-template-columns: repeat(2, 526px);
+		gap: 42px;
+		justify-content: center;
+	}
+
+	&__item {
+		padding: 43px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		filter: drop-shadow(0px 4px 25px rgba(24, 168, 108, 0.18));
+		background: $white;
+
+		&-title {
+			max-width: 410px;
+			margin: 25px auto 0;
+			font-size: 20px;
+			color: $text;
+			text-align: center;
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	.islampage .principles {
+		&__items {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 30px;
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.islampage .principles {
+		&__items {
+			gap: 20px;
+		}
+		&__item {
+			padding: 30px 20px;
+
+			&-icon {
+				width: 55px;
+			}
+
+			&-title {
+				margin-top: 10px;
+				font-size: 16px;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.islampage .principles {
+		padding: 50px 0;
+
+		&__title {
+			font-size: 26px;
+		}
+
+		&__items {
+			grid-template-columns: 1fr;
+		}
+	}
+}

@@ -1,0 +1,160 @@
+.articlepage {
+	padding-bottom: 100px;
+
+	&__inner {
+		display: grid;
+		grid-template-columns: 362px calc(100% - 402px);
+		gap: 25px;
+		align-items: start;
+	}
+
+	.article {
+		padding: 0 0 50px;
+
+		.container {
+			padding: 0;
+		}
+
+		&__title {
+			font-size: 30px;
+			font-weight: 700;
+			line-height: 1.6;
+			color: $title;
+		}
+
+		&__date {
+			display: block;
+			margin-top: 12px;
+			font-size: 16px;
+			line-height: 1.6;
+			color: $text;
+		}
+
+		&__img {
+			margin: 30px 0;
+			width: 100%;
+			img {
+				width: 100%;
+			}
+		}
+
+		&__descr {
+			p {
+				margin-top: 15px;
+				font-size: 16px;
+				line-height: 1.6;
+				color: $text;
+
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+
+			h2 {
+				margin-top: 15px;
+				font-size: 30px;
+				font-weight: 700;
+				color: $title;
+
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+
+			h3 {
+				margin-top: 15px;
+				font-size: 20px;
+				font-weight: 700;
+				color: $title;
+
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+
+			ul {
+				margin-top: 15px;
+				padding-left: 20px;
+
+				&:first-child {
+					margin-top: 0;
+				}
+
+				li {
+					line-height: 1.6;
+					list-style: disc;
+					list-style-type: disc;
+				}
+			}
+
+			ol {
+				margin-top: 15px;
+				padding-left: 20px;
+
+				&:first-child {
+					margin-top: 0;
+				}
+
+				li {
+					line-height: 1.6;
+					list-style: decimal;
+					list-style-type: decimal;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1350px) {
+	.articlepage {
+		&__inner {
+			gap: 25px;
+		}
+	}
+}
+
+@media (max-width: 1170px) {
+	.articlepage {
+		padding-bottom: 0;
+
+		&__inner {
+			display: flex;
+			flex-direction: column;
+			align-items: normal;
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.articlepage {
+		.article {
+			padding: 0 15px;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.articlepage .article {
+		&__title {
+			font-size: 26px;
+		}
+
+		&__date {
+			margin-top: 10px;
+		}
+
+		&__img {
+			margin-top: 15px;
+		}
+
+		&__descr {
+			h2 {
+				font-size: 26px;
+			}
+
+			h3 {
+				font-size: 18px;
+			}
+		}
+	}
+}

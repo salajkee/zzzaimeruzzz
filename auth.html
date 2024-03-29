@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<body>
+		<section class="auth">
+			<form class="auth__form" action="#">
+				<h2 class="auth__form-title">Регистрация на сайте</h2>
+				<div class="auth__form-item item">
+					<span class="item__head">Телефон</span>
+					<span class="input__before">+998</span>
+					<input
+						class="item__input input__tel phone-input"
+						type="tel"
+						id="phone-wizard"
+						autocomplete="off"
+					/>
+				</div>
+				<div class="auth__form-item item">
+					<span class="item__head">Имя</span>
+					<input class="item__input name-input" type="text" />
+				</div>
+				<div class="auth__form-item item">
+					<span class="item__head">Фамилия</span>
+					<input class="item__input lastname-input" type="text" />
+				</div>
+				<button class="auth__form-btn" type="submit">Зарегистрироваться</button>
+			</form>
+		</section>
+
+		<script src="./js/script.js"></script>
+	</body>
+</html>

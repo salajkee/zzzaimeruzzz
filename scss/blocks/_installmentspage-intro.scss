@@ -1,0 +1,80 @@
+.installmentspage .intro {
+	padding: 100px 0 50px;
+	background: url('../images/islam/intro_bg.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		column-gap: 30px;
+	}
+
+	&__title {
+		max-width: 600px;
+		font-size: 36px;
+		font-weight: 700;
+		line-height: 1.6;
+		color: $primary;
+	}
+
+	&__text {
+		max-width: 645px;
+		margin-top: 36px;
+		font-size: 16px;
+		line-height: 1.6;
+		color: $text;
+	}
+
+	&__bot {
+		max-width: 980px;
+		margin: 50px auto 0;
+		display: flex;
+		align-items: center;
+		column-gap: 20px;
+		row-gap: 20px;
+
+		&-link {
+			padding: 5px 10px;
+			font-size: 16px;
+			line-height: 1.6;
+			color: $text;
+			border: 1px solid $primary;
+			background: #fff;
+
+			&.selected {
+				color: #fff;
+				background: $primary;
+			}
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.installmentspage .intro {
+		padding: 50px 0;
+
+		&__wrapper {
+			flex-direction: column;
+			align-items: flex-start;
+			row-gap: 20px;
+		}
+
+		&__img {
+			margin-left: auto;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.installmentspage .intro {
+		&__title {
+			font-size: 30px;
+		}
+
+		&__text {
+			margin-top: 20px;
+		}
+	}
+}

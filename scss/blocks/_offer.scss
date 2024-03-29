@@ -1,0 +1,186 @@
+.offer {
+	width: 100%;
+	background: #fff;
+
+	.container {
+		max-width: 900px;
+	}
+
+	&__wrapper {
+		padding: 35px 0;
+		background-color: #fff;
+	}
+
+	&__title {
+		font-size: 42px;
+		font-weight: 700;
+		color: $title;
+	}
+
+	&__text {
+		margin-top: 30px;
+		height: 250px;
+		overflow-y: scroll;
+		font-size: 16px;
+		line-height: 1.6;
+		color: $text;
+
+		p {
+			padding-right: 10px;
+		}
+
+		/* width */
+		&::-webkit-scrollbar {
+			width: 5px;
+		}
+
+		/* Track */
+		&::-webkit-scrollbar-track {
+			background: #dddddd;
+		}
+
+		/* Handle */
+		&::-webkit-scrollbar-thumb {
+			background: #979797;
+		}
+	}
+
+	&__form {
+		margin-top: 30px;
+
+		.item {
+			position: relative;
+
+			&__head {
+				padding: 0 10px;
+				position: absolute;
+				top: -9.6px;
+				left: 10px;
+				font-size: 14px;
+				color: $text;
+				background: #f8f8f8;
+				z-index: 2;
+			}
+
+			&__input {
+				width: 350px;
+				height: 50px;
+				padding: 0 20px;
+				border: 1px solid #606060;
+
+				&.error {
+					border: 1px solid red;
+				}
+			}
+		}
+
+		&-text {
+			margin-top: 20px;
+			font-size: 16px;
+
+			span {
+				font-weight: 600;
+				color: $primary;
+			}
+		}
+	}
+
+	&__check {
+		margin-top: 20px;
+		display: flex;
+		align-items: center;
+		column-gap: 8px;
+
+		&-input {
+			width: 18px;
+			height: 18px;
+			min-width: 18px;
+			min-height: 18px;
+			border: 2px solid #27b76c;
+		}
+
+		input[type='checkbox'] {
+			appearance: none;
+			-webkit-appearance: none;
+			width: 18px;
+			height: 18px;
+			border-radius: 2px;
+			border: 2px solid #27b76c;
+			cursor: pointer;
+			position: relative;
+			overflow: hidden;
+
+			&.error {
+				border-color: #ff6767;
+			}
+		}
+
+		label {
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 1.5;
+			color: #333a48;
+			user-select: none;
+		}
+
+		input[type='checkbox']::after {
+			content: url('../images/wizard/checkbox.svg');
+			width: 18px;
+			height: 18px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.1s linear;
+		}
+
+		input[type='checkbox']:checked::after {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	&__btn {
+		margin-top: 30px;
+		width: 350px;
+		height: 50px;
+		font-size: 16px;
+		font-weight: 700;
+		color: #fcfbf9;
+		background-color: $primary;
+		transition: all 0.2s linear;
+		border: 2px solid $primary;
+
+		@media (hover: hover) {
+			&:hover {
+				color: $primary;
+				background-color: $white;
+			}
+		}
+
+		@media (hover: none) {
+			&:active {
+				color: $primary;
+				background-color: $white;
+			}
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.offer {
+		&__title {
+			font-size: 32px;
+		}
+
+		&__form .item__input {
+			width: 100%;
+		}
+
+		&__btn {
+			width: 100%;
+		}
+	}
+}

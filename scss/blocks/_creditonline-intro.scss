@@ -1,0 +1,95 @@
+.credit-online .intro {
+	width: 100%;
+	height: calc(100vh - 66px);
+	background: url('../images/credit-online/intro_bg.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	&__wrapper {
+		width: 100%;
+		height: calc(100vh - 66px);
+		padding-top: 200px;
+		position: relative;
+	}
+
+	&__title {
+		max-width: 500px;
+		font-size: 45px;
+		font-weight: 700;
+		color: $primary;
+	}
+
+	&__subtitle {
+		margin-top: 20px;
+		font-size: 20px;
+		line-height: 1.6;
+		color: $text;
+	}
+
+	&__img {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+	}
+}
+
+@media (max-width: 1300px) {
+	.credit-online .intro {
+		&__wrapper {
+			padding-top: 170px;
+		}
+
+		&__img {
+			max-width: 550px;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.credit-online .intro {
+		height: 100%;
+
+		&__wrapper {
+			height: 100%;
+			padding-top: 80px;
+			display: flex;
+			flex-direction: column;
+		}
+
+		&__title {
+			max-width: 100%;
+		}
+
+		&__subtitle {
+			br {
+				display: none;
+			}
+		}
+
+		&__img {
+			margin: 50px auto 0;
+			position: relative;
+			top: auto;
+			right: auto;
+			bottom: auto;
+			left: auto;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.credit-online .intro {
+		&__title {
+			font-size: 30px;
+		}
+
+		&__subtitle {
+			font-size: 16px;
+		}
+
+		&__img {
+			max-width: 450px;
+		}
+	}
+}

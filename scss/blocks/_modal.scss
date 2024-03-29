@@ -1,0 +1,274 @@
+.modal {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.2s linear;
+	pointer-events: none;
+	overflow-y: auto;
+
+	&.modal--active {
+		opacity: 1;
+		visibility: visible;
+		pointer-events: all;
+	}
+
+	&__bg {
+		width: 100%;
+		height: 100%;
+		padding: 20px 15px;
+		overflow-y: auto;
+
+		background: rgba(255, 255, 255, 0.6);
+		backdrop-filter: blur(6px);
+	}
+
+	&__body {
+		max-width: 980px;
+		margin: 0 auto;
+		padding: 70px 200px;
+		position: relative;
+		background: $white;
+		box-shadow: 0px 4px 36px 0px rgba(0, 181, 106, 0.3);
+
+		&--active {
+			width: 550px;
+			padding: 133px 50px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	&__close {
+		position: absolute;
+		top: 35px;
+		right: 35px;
+	}
+
+	&__content {
+		display: block;
+
+		&.hidden {
+			display: none;
+		}
+	}
+
+	&__title {
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 1.6;
+		color: $title;
+		text-align: center;
+	}
+
+	&__subtitle {
+		margin-top: 15px;
+		font-size: 16px;
+		line-height: 1.6;
+		color: $text;
+		text-align: center;
+	}
+
+	&__form {
+		max-width: 404px;
+		margin: 20px auto 0;
+
+		.item {
+			position: relative;
+
+			&:not(:first-child) {
+				margin-top: 30px;
+			}
+
+			&:nth-child(2) {
+				width: 100%;
+				height: 60px;
+				padding: 0 20px 0 60px;
+				border: 1px solid #606060;
+
+				&.error {
+					border: 1px solid red;
+				}
+
+				.input__before {
+					height: 100%;
+					display: flex;
+					align-items: center;
+					font-size: 16px;
+					color: $text;
+					position: absolute;
+					top: 0;
+					left: 20px;
+				}
+
+				input {
+					height: 100%;
+					font-size: 16px;
+					color: $text;
+				}
+			}
+
+			&__head {
+				padding: 0 10px;
+				position: absolute;
+				top: -9.6px;
+				left: 10px;
+				font-size: 14px;
+				color: $text;
+				background: #f8f8f8;
+				z-index: 2;
+			}
+
+			.select {
+				width: 100%;
+				height: 60px;
+
+				&__top {
+					border: 1px solid #606060;
+
+					&.error {
+						border: 1px solid red;
+					}
+				}
+
+				.options {
+					width: 100%;
+					top: 60px;
+					left: 0;
+					border: none;
+					box-shadow: 0px 4px 10px 0px rgba(0, 181, 106, 0.3);
+					z-index: 3;
+
+					&.open-up {
+						top: auto;
+						bottom: 60px;
+						box-shadow: 0px -4px 10px 0px rgba(0, 181, 106, 0.3);
+					}
+
+					&--active {
+						display: block;
+					}
+				}
+			}
+		}
+
+		&-input {
+			width: 100%;
+			height: 60px;
+			padding: 0 20px;
+			border: 1px solid #606060;
+
+			&.error {
+				border: 1px solid red;
+			}
+		}
+
+		&-btn {
+			margin-top: 30px;
+			width: 100%;
+			height: 60px;
+			font-size: 16px;
+			font-weight: 700;
+			color: #fcfbf9;
+			background-color: $primary;
+			transition: all 0.2s linear;
+			border: 2px solid $primary;
+
+			@media (hover: hover) {
+				&:hover {
+					color: $primary;
+					background-color: $white;
+				}
+			}
+
+			@media (hover: none) {
+				&:active {
+					color: $primary;
+					background-color: $white;
+				}
+			}
+		}
+	}
+
+	&__thnks {
+		display: block;
+
+		&-title {
+			font-size: 30px;
+			font-weight: 700;
+			line-height: 1.6;
+			color: $primary;
+			text-align: center;
+		}
+
+		&-subtitle {
+			margin-top: 15px;
+			font-size: 16px;
+			line-height: 1.6;
+			color: $text;
+			text-align: center;
+		}
+
+		&.hidden {
+			display: none;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.modal {
+		&__body {
+			max-width: 730px;
+			padding: 70px 50px;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.modal {
+		&__body {
+			max-width: 730px;
+			padding: 60px 15px;
+
+			&--active {
+				width: 345px;
+			}
+
+			@media (max-width: 375px) {
+				&--active {
+					width: 100%;
+				}
+			}
+		}
+
+		&__close {
+			top: 20px;
+			right: 20px;
+		}
+
+		&__subtitle {
+			margin-top: 10px;
+		}
+
+		&__thnks-title {
+			font-size: 24px;
+		}
+		&__thnks-subtitle {
+			margin-top: 10px;
+		}
+
+		&__form {
+			&-input,
+			&-select,
+			&-btn {
+				height: 55px;
+			}
+		}
+	}
+}

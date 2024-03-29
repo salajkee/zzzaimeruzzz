@@ -1,0 +1,153 @@
+.articlepage .interested {
+	padding: 50px 0 100px;
+
+	.container {
+		padding: 0;
+	}
+
+	&__title {
+		font-size: 30px;
+		font-weight: 700;
+		line-height: 1.6;
+		color: $title;
+	}
+
+	&__slider {
+		margin-top: 46px;
+		position: relative;
+		overflow: hidden;
+
+		&-item {
+			height: auto;
+			display: flex;
+			flex-direction: column;
+
+			&-img {
+				height: 272px;
+				object-fit: cover;
+			}
+
+			&-date {
+				margin-top: 15px;
+				font-size: 16px;
+				line-height: 1.6;
+				color: $text;
+			}
+
+			&-title {
+				margin: 15px 0;
+				font-size: 20px;
+				font-weight: 700;
+				line-height: 1.6;
+				color: $title;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-line-clamp: 1;
+				-webkit-box-orient: vertical;
+			}
+
+			&-descr {
+				margin-top: auto;
+				height: 76.8px;
+				overflow: hidden;
+
+				p {
+					font-size: 16px;
+					line-height: 1.6;
+					color: $text;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					display: -webkit-box;
+					-webkit-line-clamp: 3;
+					-webkit-box-orient: vertical;
+				}
+			}
+
+			&-link {
+				margin-top: 15px;
+				font-size: 16px;
+				font-weight: 700;
+				line-height: 1.5;
+				color: $primary;
+				display: flex;
+				align-items: center;
+
+				svg {
+					width: 27px;
+					height: 8px;
+					margin-left: 15px;
+					fill: $primary;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.articlepage {
+		.container {
+			padding: 0;
+		}
+
+		.interested {
+			&__title {
+				padding: 0 15px;
+			}
+			&__slider {
+				padding: 0 15px;
+				&-item {
+					max-width: 380px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.articlepage {
+		.container {
+			padding: 0;
+		}
+
+		.interested {
+			&__title {
+				font-size: 26px;
+			}
+			&__slider {
+				margin-top: 25px;
+
+				&-item {
+					max-width: 320px;
+
+					&-img {
+						height: 200px;
+					}
+
+					&-date {
+						margin-top: 10px;
+					}
+
+					&-title {
+						font-size: 16px;
+						margin: 10px 0;
+					}
+
+					&-link {
+						margin-top: 10px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 375px) {
+	.articlepage {
+		.interested {
+			&__slider-item {
+				max-width: 280px;
+			}
+		}
+	}
+}
