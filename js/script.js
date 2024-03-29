@@ -772,7 +772,7 @@ try {
 	let provision = document.querySelector('.provision-input');
 
 	name.addEventListener('change', e => {
-		if (e.target.value.length > 2) {
+		if (e.target.value.length >= 2) {
 			name.classList.remove('error');
 		} else {
 			name.classList.add('error');
@@ -780,10 +780,10 @@ try {
 	});
 
 	phone.addEventListener('change', e => {
-		if (e.target.value.length === 17) {
-			phone.classList.remove('error');
+		if (e.target.value.length === 12) {
+			phone.parentNode.classList.remove('error');
 		} else {
-			phone.classList.add('error');
+			phone.parentNode.classList.add('error');
 		}
 	});
 
@@ -817,7 +817,7 @@ try {
 
 		if (
 			name.value.length >= 2 &&
-			phone.value.length === 17 &&
+			phone.value.length === 12 &&
 			sum.value.length > 0 &&
 			region.textContent !== 'Выберите город' &&
 			region.textContent !== 'Shaharni tanlang'
@@ -891,7 +891,7 @@ try {
 			name.value.length > 2
 				? name.classList.remove('error')
 				: name.classList.add('error');
-			phone.value.length === 17
+			phone.value.length === 12
 				? phone.classList.remove('error')
 				: phone.classList.add('error');
 			sum.value.length > 0
@@ -918,7 +918,7 @@ try {
 	let provision = document.querySelector('.provision-input');
 
 	name.addEventListener('change', e => {
-		if (e.target.value.length > 2) {
+		if (e.target.value.length >= 2) {
 			name.classList.remove('error');
 		} else {
 			name.classList.add('error');
@@ -926,7 +926,7 @@ try {
 	});
 
 	phone.addEventListener('change', e => {
-		if (e.target.value.length === 17) {
+		if (e.target.value.length === 12) {
 			phone.classList.remove('error');
 		} else {
 			phone.classList.add('error');
@@ -963,7 +963,7 @@ try {
 
 		if (
 			name.value.length > 2 &&
-			phone.value.length === 17 &&
+			phone.value.length === 12 &&
 			sum.value.length > 0 &&
 			region.textContent !== 'Выберите город' &&
 			region.textContent !== 'Shaharni tanlang'
@@ -1036,7 +1036,7 @@ try {
 			name.value.length > 2
 				? name.classList.remove('error')
 				: name.classList.add('error');
-			phone.value.length === 17
+			phone.value.length === 12
 				? phone.classList.remove('error')
 				: phone.classList.add('error');
 			sum.value.length > 0
@@ -2048,5 +2048,106 @@ try {
 		}
 
 		offerText.textContent = (sum * 0.02).toLocaleString();
+	});
+} catch (e) {}
+
+// Auth
+try {
+	const auth = document.querySelector('.auth');
+	const authForm = auth.querySelector('.auth__form');
+	const phone = auth.querySelector('.phone-input');
+	const name = auth.querySelector('.name-input');
+	const lastName = auth.querySelector('.lastname-input');
+	const btn = auth.querySelector('.auth__form-btn');
+
+	name.addEventListener('change', e => {
+		if (e.target.value.length >= 2) {
+			name.classList.remove('error');
+		} else {
+			name.classList.add('error');
+		}
+	});
+
+	lastName.addEventListener('change', e => {
+		if (e.target.value.length >= 2) {
+			lastName.classList.remove('error');
+		} else {
+			lastName.classList.add('error');
+		}
+	});
+
+	phone.addEventListener('change', e => {
+		if (e.target.value.length === 12) {
+			phone.parentNode.classList.remove('error');
+		} else {
+			phone.parentNode.classList.add('error');
+		}
+	});
+
+	authForm.addEventListener('submit', e => {
+		e.preventDefault();
+
+		let isValid = {
+			phone: true,
+			name: true,
+			lastName: true,
+		};
+
+		if (phone.value.length === 12) {
+			phone.parentNode.classList.remove('error');
+			isValid.phone = true;
+		} else {
+			phone.parentNode.classList.add('error');
+			isValid.phone = false;
+		}
+		if (name.value.length >= 2) {
+			name.classList.remove('error');
+			isValid.name = true;
+		} else {
+			name.classList.add('error');
+			isValid.name = false;
+		}
+		if (lastName.value.length >= 2) {
+			lastName.classList.remove('error');
+			isValid.lastName = true;
+		} else {
+			lastName.classList.add('error');
+			isValid.lastName = false;
+		}
+
+		if (isValid.phone && isValid.name && isValid.lastName) {
+			let userData = {
+				firstName: name.value,
+				lastName: lastName.value,
+				phoneNumber: phone.value,
+				auth: true,
+			};
+
+			// Сохраняем данные в LocalStorage
+			localStorage.setItem('offerInfo', JSON.stringify(userData));
+
+			// Редирект на другую страницу
+			window.location.href = 'offer.html';
+		}
+	});
+} catch (e) {}
+
+try {
+	document.addEventListener('DOMContentLoaded', function () {
+		const section = document.querySelector('section.offer');
+		if (section) {
+			// Проверяем, есть ли данные в LocalStorage
+			const offerInfo = localStorage.getItem('offerInfo');
+			if (offerInfo) {
+				const userData = JSON.parse(offerInfo);
+				if (userData.auth !== true) {
+					window.location.href = 'auth.html';
+				}
+			} else {
+				window.location.href = 'auth.html';
+			}
+		} else {
+			console.log('first');
+		}
 	});
 } catch (e) {}
