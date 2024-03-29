@@ -19,7 +19,7 @@
 
 	&__text {
 		margin-top: 30px;
-		height: 250px;
+		max-height: 250px;
 		overflow-y: scroll;
 		font-size: 16px;
 		line-height: 1.6;
@@ -45,9 +45,39 @@
 		}
 	}
 
-	&__form {
-		margin-top: 30px;
+	&__download {
+		padding: 10px 20px;
+		display: inline-flex;
+		align-items: center;
+		column-gap: 5px;
+		font-size: 14px;
+		font-weight: 700;
+		color: #fcfbf9;
+		background-color: $primary;
+		transition: all 0.2s linear;
+		border: 2px solid $primary;
 
+		img {
+			width: 13px;
+			height: 15px;
+		}
+
+		@media (hover: hover) {
+			&:hover {
+				border-color: #00a862;
+				background-color: #00a862;
+			}
+		}
+
+		@media (hover: none) {
+			&:active {
+				border-color: #00a862;
+				background-color: #029a5a;
+			}
+		}
+	}
+
+	&__form {
 		.item {
 			position: relative;
 
@@ -165,6 +195,33 @@
 				color: $primary;
 				background-color: $white;
 			}
+		}
+	}
+
+	&__inner {
+		margin-top: 30px;
+		display: flex;
+		align-items: start;
+		justify-content: space-between;
+		flex-direction: row-reverse;
+	}
+}
+
+@media (max-width: 768px) {
+	.offer {
+		&__wrapper {
+			padding: 20px 0;
+		}
+		&__text {
+			margin-top: 20px;
+		}
+		&__download {
+			padding: 5px 10px;
+		}
+		&__inner {
+			margin-top: 15px;
+			flex-direction: column;
+			row-gap: 30px;
 		}
 	}
 }
