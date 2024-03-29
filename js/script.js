@@ -2136,7 +2136,6 @@ try {
 	document.addEventListener('DOMContentLoaded', function () {
 		const section = document.querySelector('section.offer');
 		if (section) {
-			// Проверяем, есть ли данные в LocalStorage
 			const offerInfo = localStorage.getItem('offerInfo');
 			if (offerInfo) {
 				const userData = JSON.parse(offerInfo);
@@ -2146,8 +2145,6 @@ try {
 			} else {
 				window.location.href = 'auth.html';
 			}
-		} else {
-			console.log('first');
 		}
 	});
 } catch (e) {}
